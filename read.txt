@@ -1,0 +1,41 @@
+## postgres
+
+# criando o container postgres
+docker run --name database2 -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+
+
+
+
+
+## redis
+
+docker run -d \
+  -e REDIS_PASSWORD=redis \
+  -v redis-data:/data \
+  -p 6379:6379 \
+  --name redis \
+  --restart always \
+  redis:6.0-alpine3.14 redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
+  
+  
+  Quick setup — if you’ve done this kind of thing before
+or	
+git@github.com:Luisglobal/wine-queue.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# wine-queue" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Luisglobal/wine-queue.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin git@github.com:Luisglobal/wine-queue.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
